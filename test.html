@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Img Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body >
+    <button onclick="FBShare()">FB基本API</button>
+
+    <script>
+        function FBShare(){
+            var msg = "是否離開新光人壽網頁XXXXXX";
+            if(!confirm(msg)) return;
+            var fbURL = "http://www.facebook.com/sharer/sharer.php?u=" + "https://hiskio.com/professions/1";
+            window.location.href = fbURL;
+        }
+    </script>
+
+</body>
+
+</html>

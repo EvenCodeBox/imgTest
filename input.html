@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+        @keyframes hover-color {
+            from {
+                border-color: #ffb700;
+            }
+            to {
+                border-color: #ffb700;
+            }
+        }
+
+        .readconsent-checkbox {
+            position: absolute;
+            display: none;
+        }
+
+        .readconsent-checkbox[disabled] {
+            cursor: not-allowed;
+        }
+
+        .readconsent-checkbox+label {
+            position: relative;
+            display: block;
+            padding-left: 30px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        .readconsent-checkbox+label:hover:before {
+            animation-duration: 0.4s;
+            animation-fill-mode: both;
+            animation-name: hover-color;
+        }
+
+        .readconsent-checkbox+label:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            content: '';
+            border: 1px solid #ffb700;
+        }
+
+        .readconsent-checkbox+label:after {
+            position: absolute;
+            display: none;
+            content: '';
+        }
+
+        .readconsent-checkbox[disabled]+label {
+            cursor: not-allowed;
+            color: #ffb700;
+        }
+
+        .readconsent-checkbox[disabled]+label:hover,
+        .readconsent-checkbox[disabled]+label:before,
+        .readconsent-checkbox[disabled]+label:after {
+            cursor: not-allowed;
+        }
+
+        .readconsent-checkbox[disabled]+label:hover:before {
+            border: 1px solid #ffb700;
+            animation-name: none;
+        }
+
+        .readconsent-checkbox[disabled]+label:before {
+            border-color: red;
+        }
+
+        .readconsent-checkbox:checked+label:before {
+            animation-name: none;
+        }
+
+        .readconsent-checkbox:checked+label:after {
+            display: block;
+        }
+
+        .readconsent-checkbox+label:before {
+            border-radius: 3px;
+        }
+
+        .readconsent-checkbox+label:after {
+            top: 2px;
+            left: 10px;
+            box-sizing: border-box;
+            width: 8px;
+            height: 20px;
+            transform: rotate(45deg);
+            border-width: 2px;
+            border-style: solid;
+            border-color: #ffb700;
+            border-top: 0;
+            border-left: 0;
+        }
+
+        .readconsent-checkbox:checked+label:before {
+            border: #ffb700 solid 1px;
+            background: none;
+        }
+
+        .readconsent-checkbox:checked[disabled]+label:before {
+            border: #ffb700;
+            background: #ffb700;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+
+
+        <div class="demo">
+            <div class="col">
+                <h4>Checkbox</h4>
+
+                <div class="opt">
+                    <input class="readconsent-checkbox" type="checkbox" name="layout" id="c2">
+                    <label for="c2" style="font-size:30px;">Checked</label>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

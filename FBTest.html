@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ㄑ, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script>
+        
+            FB.init({
+                appId: '266319687311234',
+                cookie: true,
+                xfbml: true,
+                version: 'v3.1'
+            });
+
+            FB.AppEvents.logPageView();
+
+
+            FB.getLoginStatus(function (response) {
+                console.log(response);
+                if (response.status === 'connected') {
+                    var publish = {
+                        method: 'share',
+                       // display: '',
+                        href: 'https://www.udemy.com/',
+                        hashtag: '#只能一個而且有字數限制',
+                        caption: '我想測試'
+                    };
+                    FB.ui(publish,null);
+                }
+            });
+
+
+    </script>
+</head>
+
+<body>
+
+   
+        <button id="test ">分享測試用</button>
+        <script>
+
+        </script>
+</body>
+
+</html>
